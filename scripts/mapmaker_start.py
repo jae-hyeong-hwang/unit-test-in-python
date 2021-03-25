@@ -1,6 +1,9 @@
 class Point():
   def __init__(self, name, latitude, longitutde)
     self._name = name
+    
+    if not(-90 <= latitude <= 90) or not (-180 <= longitude <= 180)
+        raise ValueError("Invalude latitude, longitude")
     self._longitude = longitude
     self._latitude = latitude
 
