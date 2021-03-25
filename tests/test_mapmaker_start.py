@@ -13,3 +13,6 @@ def test_invalid_point_generation():
     #breakpoint()
     assert str(exp.value) == 'Invalid latitude, longitude combination'
     
+    with pytest.raises(ValueError) as exp:
+        Point(5, 12.11386, -55.08269)
+    assert str(exp.value) == 'City name provided must be a string'
